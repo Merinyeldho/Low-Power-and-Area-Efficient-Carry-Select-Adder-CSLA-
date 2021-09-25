@@ -6,7 +6,11 @@ module csla_tb;
 	
 	
 	csla uut(x,y,s,cout);
-
+        initial
+        begin
+        $dumpfile("csla_top.vcd");
+        $dumpvars(0, csla_tb);
+        end
   	initial
     	begin
       	#10 x = 32'h56745675; y = 32'h54546576; 
